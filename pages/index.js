@@ -36,8 +36,8 @@ export default function Posts({ posts }) {
 
 export async function getStaticProps() {
   // Hacer la solicitud a la API de WordPress
-  //const URL_ENDPOINT = process.env.API_V2 
-  const URL_ENDPOINT = "http://localhost:3000/posts.json";
+  const URL_ENDPOINT = process.env.API_V2 
+  //const URL_ENDPOINT = "http://localhost:3000/posts.json";
   let posts = []
   try{
 
