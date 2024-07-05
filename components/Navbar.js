@@ -1,8 +1,11 @@
+import Image from "next/image"
+
 const Navbar = () => {
     return (
         <>
-        <nav className="pb-2 shadow-md rounded-md">
-            <h1 className='text-3xl text-center my-5'>BLOGENIO</h1>
+        <nav className="p-4 shadow-md rounded-md text-center">
+            <Image className='text-black mx-auto' src="/logo.svg" height={30} width={30} alt='back'/>  
+            <h1 className='text-3xl text-center'>BLOGENIO</h1>
         </nav>
         </>
     )

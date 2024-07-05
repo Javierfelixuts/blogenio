@@ -11,6 +11,9 @@ import CardPost from '../components/CardPost'
 
 export default function Posts({ posts }) {
 
+  if(posts.length < 0){
+    return <h1>No hay publicaciones</h1>
+  }
   return (
     <>
 
@@ -33,8 +36,16 @@ export default function Posts({ posts }) {
 
 export async function getStaticProps() {
   // Hacer la solicitud a la API de WordPress
-  const res = await fetch('https://fernandafamiliar.soy/wp-json/wp/v2/posts');
-  const posts = await res.json();
+  //const URL_ENDPOINT = process.env.API_V2 
+  const URL_ENDPOINT = "http://localhost:3000/posts.json";
+  let posts = []
+  try{
+
+    const res = await fetch(URL_ENDPOINT);
+    posts = await res.json();
+  }catch(e){
+    console.log(e);
+  }
 
   // Retornar los posts como props
   return {
