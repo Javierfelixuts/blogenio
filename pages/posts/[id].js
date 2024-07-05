@@ -29,7 +29,7 @@ export default function PostDetail() {
     if (id) {
       fetchPost();
     }
-  }, [id]);
+  }, [id, URL_ENDPOINT]);
 
   if (loading) {
     return <div>Loading...</div>;
