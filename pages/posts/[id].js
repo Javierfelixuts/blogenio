@@ -30,7 +30,7 @@ export default function PostDetail() {
   }, [id, URL_ENDPOINT]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <span class="loader"></span>;
   }
   
   if(!post){
@@ -52,7 +52,7 @@ export default function PostDetail() {
                 className='sm:w-6/12 w-full rounded-lg mb-10'
                 />
                 
-                <h1 className='my-2 anton-regular text-3xl text-start break-words break-all'>{post?.title.rendered.toUpperCase()}</h1>
+                <h1 className='my-2 anton-regular text-md sm:text-3xl text-start break-words break-all'>{post?.title.rendered.toUpperCase()}</h1>
                 
               </div>
               <div className='text-gray-400 text-sm m-0 break-words break-all' dangerouslySetInnerHTML={{ __html: post?.content.rendered}}></div>

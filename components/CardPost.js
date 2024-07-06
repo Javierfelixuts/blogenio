@@ -16,12 +16,15 @@ const CardPost = ({post}) => {
                 className='w-full h-[200px] aspect-[8/4] object-cover rounded-lg'
                 />
               <h1 className='my-2 anton-regular text-md text-start break-words break-all'>{(post.title.rendered.length > 25 ? post.title.rendered.toUpperCase().slice(0, 50) : post.excerpt.rendered )}...</h1>
+              <p className="hover:underline underline-offset-1 text-[10px] mb-2">Ver Más</p>
 
               {/* <div className='text-gray-400 text-sm m-0 break-words break-all' dangerouslySetInnerHTML={{ __html:  (post.excerpt.rendered.length > 50 ? post.excerpt.rendered.slice(0, 50) + '...' : post.excerpt.rendered )}}></div> */}
-              <div className="flex justify-start">
-                <Image className="w-5 h-5 rounded-full" src="https://randomuser.me/api/portraits/men/75.jpg" width={10} height={10} alt="author" />
-                <span className="text-[10px] text-slate-500 mx-2">By Javier Félix</span>
-                <span className="text-[10px] text-slate-500">{formatedDate}</span>
+              <div className="flex justify-between items-center">
+                <div className="flex items-center">
+                    <Image className="w-5 h-5 rounded-full" src="https://randomuser.me/api/portraits/men/75.jpg" width={10} height={10} alt="author" />
+                    <span className="inline-block text-[10px] text-slate-500 mx-2">By Javier Félix</span>
+                </div>
+                <span className="text-[10px] text-slate-500 flex"> <Image className="mr-1" src="clock.svg" width={10} height={10} alt="⌚"/>{formatedDate}</span>
               </div>
             </div>
         </>
