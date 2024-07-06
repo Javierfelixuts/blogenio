@@ -4,6 +4,8 @@ Blogenio es un website tipo blog simple
 
 En este proyecto me sentí muy comodo, use propiedades nuevas de CSS para hacer un efecto al bajar el scroll.
 
+Utilize la API de random user para obtener una imagen, representando al autor.
+
 Hice un json_dummy con los datos de la API para trabar en los momentos que la API no estuviera dosponible.
 
 Este proyecto lo disfruté bastante, me gustó mucho el nombre del webiste (BLOGENIO), siento que le da un toque a lo que es la empresa y el blog.
