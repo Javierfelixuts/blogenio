@@ -30,7 +30,7 @@ export default function PostDetail() {
   }, [id, URL_ENDPOINT]);
 
   if (loading) {
-    return <span class="loader"></span>;
+    return <div className='w-full h-screen flex items-center justify-center'><span class="loader"></span></div>;
   }
   
   if(!post){
