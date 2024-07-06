@@ -41,7 +41,6 @@ export default function PostDetail() {
     <button className='m-4' onClick={() => router.back()}>
       <Image className='hover:text-red-300' src="/back.svg" height={30} width={30} alt='back'/>  
     </button>
-    
     <div  className='p-2 rounded-sm shadow-slate-300 w-full sm:w-8/12  mx-auto'>
               <div className='flex flex-col-reverse sm:flex-row gap-6'>
               <Image 
