@@ -2,7 +2,7 @@
 # BLOGENIO
 Blogenio es un website tipo blog simple.
 
-En este proyecto me sentí muy comodo, use propiedades nuevas de CSS para hacer un efecto al bajar el scroll.
+En este proyecto me sentí muy comodo, use propiedades nuevas de CSS para hacer un efecto al bajar el scroll y los usuarios puedan ver una animación al ir bajando.
 
 Utilize la API de random user para obtener una imagen, representando al autor.
 
