@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import CardPost from '../../components/CardPost'
 
 export default function PostDetail() {
   const router = useRouter();
@@ -17,7 +16,6 @@ export default function PostDetail() {
       try {
         const res = await fetch(`${URL_ENDPOINT}${id}`);
         const data = await res.json();
-        console.log("data: ", data);
         setPost(data);
       } catch (error) {
         console.error('Error fetching post:', error);
@@ -35,15 +33,19 @@ export default function PostDetail() {
     return <div>Loading...</div>;
   }
   
+  if(!post){
+    return <h1>No hay contenido</h1>
+  }
   return (
     <>
     <button className='m-4' onClick={() => router.back()}>
       <Image className='hover:text-red-300' src="/back.svg" height={30} width={30} alt='back'/>  
     </button>
+    
     <div  className='p-2 rounded-sm shadow-slate-300 w-full sm:w-8/12  mx-auto'>
               <div className='flex flex-col-reverse sm:flex-row gap-6'>
               <Image 
-                src={post?.jetpack_featured_media_url}
+                src={post.jetpack_featured_media_url}
                 width={400}
                 height={400}
                 alt="noticia" 

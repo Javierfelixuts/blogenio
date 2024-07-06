@@ -43,6 +43,7 @@ export async function getStaticProps() {
 
     const res = await fetch(URL_ENDPOINT);
     posts = await res.json();
+    console.log("post: ", posts)
   }catch(e){
     console.log(e);
   }
