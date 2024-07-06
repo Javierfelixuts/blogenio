@@ -20,13 +20,13 @@ export default function Posts({ posts }) {
     <main className='mx-auto p-2 md:p-8 w-11/12'>
       <h3 className='anton-regular my-4'>Lo más reciente:</h3>
       <div className='w-full '>
-      <div className='w-full grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+      <main className='w-full grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
         {posts.map(post => (
-          <Link key={post.id} href={'posts/' + post.id}>
+          <Link className='card' key={post.id} href={'posts/' + post.id}>
             <CardPost post={post}/>
           </Link>
         ))}
-      </div>
+      </main>
       </div>
     </main>
     </>

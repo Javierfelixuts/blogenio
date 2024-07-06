@@ -7,7 +7,7 @@ const CardPost = ({post}) => {
     const formatedDate = moment(post.date).format("DD MMMM YYYY");  
     return (
         <>
-        <div  className='p-2 shadow-md rounded-md shadow-slate-300 border '>
+        <div  className='hover:scale-105 transition-transform p-2 shadow-md rounded-md shadow-slate-300 border '>
               <Image 
                 src={post.jetpack_featured_media_url}
                 width={400}
